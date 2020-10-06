@@ -7,47 +7,68 @@
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <div class="options">
+    <div hidden class="winCon" id="winConWindow">
+      <p id="winConMessage">You have won/lost!</p>
+      <button class="btn" onclick="newGame()">New Game</button>
+    </div>
+    <div class="options" id="options">
       <div class="players">
-        <div>
+        <div class="playerInput">
           <label for="player1">Player 1:</label>
           <input type="text" name="playerOneInput" id="player1" />
         </div>
-        <div>
+        <div class="playerInput">
           <label for="player2">Player 2:</label>
           <input type="text" name="playerTwoInput" id="player2" />
         </div>
-        <div><button class="btn">Play against Player</button> <button class="btn">Play against Ai</button></div>
+        <div>
+          <p>AI Difficulty:</p>
+          <input type="radio" name="difficulty" value="1" id="easy" />
+          <label for="easy">Easy</label>
+          <input type="radio" name="difficulty" value="2" id="hard" />
+          <label for="hard">Hard</label>
+          <input type="radio" name="difficulty" value="3" id="unbeatable" />
+          <label for="unbeatable">Unbeatable</label>
+        </div>
+        <div>
+          <button class="btn" onclick="setPlayer('players')">vs. Player</button>
+          <button class="btn" onclick="setPlayer('ai')">vs. Ai</button>
+        </div>
       </div>
     </div>
     <div>
       <div class="container">
         <div class="info">
           <h1>Tic Tac Toe</h1>
+          <p>Play by clicking the Squares below.</p>
+          <p>You win if you get three of your mark in a row or diagonaly</p>
+          <p id="turnInfo">Current Player:</p>
         </div>
+
         <div class="board">
           <table>
             <tr class="fieldRow" id="row1">
-              <td class="field" id="0_0">X</td>
-              <td class="field" id="0_1">O</td>
-              <td class="field" id="0_2">X</td>
+              <td class="field" id="0_0"></td>
+              <td class="field" id="0_1"></td>
+              <td class="field" id="0_2"></td>
             </tr>
             <tr class="fieldRow" id="row2">
-              <td class="field" id="1_0">O</td>
-              <td class="field" id="1_1">X</td>
-              <td class="field" id="1_2">O</td>
+              <td class="field" id="1_0"></td>
+              <td class="field" id="1_1"></td>
+              <td class="field" id="1_2"></td>
             </tr>
             <tr class="fieldRow" id="row3">
-              <td class="field" id="2_0">O</td>
-              <td class="field" id="2_1">X</td>
-              <td class="field" id="2_2">X</td>
+              <td class="field" id="2_0"></td>
+              <td class="field" id="2_1"></td>
+              <td class="field" id="2_2"></td>
             </tr>
           </table>
         </div>
         <div class="logic">
-          <button class="btn">New Game</button>
+          <button class="btn" onclick="newGame()">New Game</button>
         </div>
       </div>
     </div>
   </body>
+  <script src="./game.js"></script>
 </html>

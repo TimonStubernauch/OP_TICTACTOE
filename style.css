@@ -9,7 +9,7 @@
   height: 200px;
   text-align: center;
   border: 5px solid black;
-  font-size: 50px;
+  font-size: 80px;
 }
 table {
   border-collapse: collapse;
@@ -22,6 +22,7 @@ table {
   margin: 20px auto;
   width: 100px;
   height: 35px;
+  font-family: 'eraserregular';
 }
 .logic {
   display: flex;
@@ -33,12 +34,70 @@ table {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  width: 350px;
-  height: 200px;
-  background-color: white;
+  width: 400px;
+  height: 280px;
+
   border: 1px solid black;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 20px;
+  background-image: url('./windowBg.jpg');
+  background-size: contain;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+}
+.playerInput {
+  padding: 0px;
+  margin: 20px 0px;
+}
+.winCon {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+  background-image: url('./windowBg.jpg');
+  background-size: contain;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+
+  justify-content: space-around;
+  text-align: center;
+}
+@font-face {
+  font-family: 'eraserregular';
+  src: url('EraserRegular-webfont.eot');
+  src: url('EraserRegular-webfont.eot?#iefix') format('embedded-opentype'), url('EraserRegular-webfont.woff') format('woff'),
+    url('EraserRegular-webfont.ttf') format('truetype'), url('EraserRegular-webfont.svg#eraserregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'eraserregular';
+  color: white;
+}
+html {
+  background: url('./bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1 {
+  font-size: 80px;
+  margin: 10px 0px;
+  padding: 0px;
+}
+p {
+  margin: 5px 0px;
+  padding: 0px;
+  font-size: 15px;
+}
+#winConMessage {
+  font-size: larger;
+  margin-top: 25px;
 }
