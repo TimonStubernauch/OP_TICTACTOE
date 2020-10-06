@@ -1,0 +1,44 @@
+.container {
+  width: 600px;
+  height: 800px;
+  margin: 20px auto;
+}
+
+.field {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  border: 5px solid black;
+  font-size: 50px;
+}
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+.info {
+  text-align: center;
+}
+.btn {
+  margin: 20px auto;
+  width: 100px;
+  height: 35px;
+}
+.logic {
+  display: flex;
+  justify-content: space-around;
+}
+.players {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}

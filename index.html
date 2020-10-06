@@ -3,7 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Tic Tac Toe</title>
   </head>
-  <body></body>
+  <body>
+    <div class="options">
+      <div class="players">
+        <div>
+          <label for="player1">Player 1:</label>
+          <input type="text" name="playerOneInput" id="player1" />
+        </div>
+        <div>
+          <label for="player2">Player 2:</label>
+          <input type="text" name="playerTwoInput" id="player2" />
+        </div>
+        <div><button class="btn">Play against Player</button> <button class="btn">Play against Ai</button></div>
+      </div>
+    </div>
+    <div>
+      <div class="container">
+        <div class="info">
+          <h1>Tic Tac Toe</h1>
+        </div>
+        <div class="board">
+          <table>
+            <tr class="fieldRow" id="row1">
+              <td class="field" id="0_0">X</td>
+              <td class="field" id="0_1">O</td>
+              <td class="field" id="0_2">X</td>
+            </tr>
+            <tr class="fieldRow" id="row2">
+              <td class="field" id="1_0">O</td>
+              <td class="field" id="1_1">X</td>
+              <td class="field" id="1_2">O</td>
+            </tr>
+            <tr class="fieldRow" id="row3">
+              <td class="field" id="2_0">O</td>
+              <td class="field" id="2_1">X</td>
+              <td class="field" id="2_2">X</td>
+            </tr>
+          </table>
+        </div>
+        <div class="logic">
+          <button class="btn">New Game</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
